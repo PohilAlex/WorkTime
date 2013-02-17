@@ -1,0 +1,43 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.pohil.worktime"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/lunch"
+        android:padding="10dp"
+        android:textSize="14sp"
+        />
+    <com.pohil.worktime.TimerView
+        android:id="@+id/lunch_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" 
+        android:gravity="center"
+        android:padding="50dp"
+        android:textSize="35sp"/>
+    
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/day"
+        android:padding="10dp"
+        android:textSize="14sp"
+        />
+    <com.pohil.worktime.TimerView
+        android:id="@+id/day_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" 
+        android:gravity="center"
+        android:padding="50dp"
+        android:textSize="35sp"/>
+
+</LinearLayout>

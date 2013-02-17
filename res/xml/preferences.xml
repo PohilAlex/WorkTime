@@ -1,0 +1,78 @@
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Lunch">
+	    <com.pohil.worktime.TimePreference
+	          android:key="lunch_time"
+			  android:dialogLayout="@layout/time_preference"
+			  android:title="@string/time"
+			  android:defaultValue="@string/default_lunch_time"  />
+		<CheckBoxPreference
+		    android:key="lunch_notification_enable"
+		    android:title="Enable notification"
+		    android:defaultValue="false"
+		   />
+	     <PreferenceScreen
+	        android:key="lunch_notification_settings"
+	        android:title="Notification settings"
+	        android:dependency="lunch_notification_enable"
+	        android:persistent="false">
+		    <CheckBoxPreference
+			    android:key="lunch_vibrate_notification_enable"
+			    android:title="Vibrate"
+			    android:defaultValue="false"
+			    android:dependency="lunch_notification_enable" />
+			<CheckBoxPreference
+			    android:key="lunch_voice_notification_enable"
+			    android:title="Voice"
+			    android:defaultValue="false"
+			    android:dependency="lunch_notification_enable"  />
+		    <RingtonePreference
+		        android:key="lunch_rington"
+		        android:title="Rington"
+		        android:ringtoneType="alarm"
+		        android:showDefault="true"
+		        android:defaultValue="content://settings/system/alarm_alert"
+		        android:dependency="lunch_voice_notification_enable"
+		        />
+	    </PreferenceScreen>
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:title="Day">
+	    <com.pohil.worktime.TimePreference
+	          android:key="day_time"
+			  android:dialogLayout="@layout/time_preference"
+			  android:title="@string/time"
+			  android:defaultValue="@string/default_day_time"  />
+		<CheckBoxPreference
+		    android:key="day_notification_enable"
+		    android:title="Enable notification"
+		    android:defaultValue="false"
+		   />
+	     <PreferenceScreen
+	        android:key="day_notification_settings"
+	        android:title="Notification settings"
+	        android:dependency="day_notification_enable"
+	        android:persistent="false">
+		    <CheckBoxPreference
+			    android:key="day_vibrate_notification_enable"
+			    android:title="Vibrate"
+			    android:defaultValue="false"
+			    android:dependency="day_notification_enable" />
+			<CheckBoxPreference
+			    android:key="day_voice_notification_enable"
+			    android:title="Voice"
+			    android:defaultValue="false"
+			    android:dependency="day_notification_enable"  />
+		    <RingtonePreference
+		        android:key="day_rington"
+		        android:title="Rington"
+		        android:ringtoneType="alarm"
+		        android:showDefault="true"
+		        android:defaultValue="content://settings/system/alarm_alert"
+		        android:dependency="day_voice_notification_enable"
+		        />
+	    </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,24 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/notify_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+       	android:textSize="24sp"
+        android:text="Alarm notification"/>
+    	
+    <com.pohil.worktime.UnlockerView
+        android:id="@+id/unlocker"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+
+</LinearLayout>
+    
